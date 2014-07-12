@@ -1,0 +1,14 @@
+{
+  "name": "name-extractor",
+  "version": "0.0.0",
+  "description": "Give a String, extract out potential names",
+  "main": "name-extractor.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "author": "David Björklund <david.bjorklund@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^2.13.3"
+  }
+}
