@@ -13,5 +13,13 @@
   },
   "dependencies": {
     "title-case-minors": "0.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kesla/name-extractor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kesla/name-extractor/issues"
+  },
+  "homepage": "https://github.com/kesla/name-extractor"
 }
