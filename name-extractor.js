@@ -4,7 +4,7 @@ var minors = require('title-case-minors').reduce(function (obj, minor) {
     }, {})
 
   , Extractor = function (input) {
-      this.tokens = input.split(' ')
+      this.tokens = input.trim().split(/\s+/)
       this.names = []
     },
     isCapitalized = function (string) {

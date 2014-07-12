@@ -28,3 +28,17 @@ test('include title minor-case words', function (t) {
   )
   t.end()
 })
+
+test('include some crazy spacing', function (t) {
+  t.deepEqual(
+      extract(' \t the\r\tHello\t\t\t\n World\t\r\t').sort()
+    , [
+          'Hello'
+        , 'Hello World'
+        , 'World'
+        , 'the Hello'
+        , 'the Hello World'
+      ]
+  )
+  t.end()
+})
