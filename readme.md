@@ -1,4 +1,4 @@
-# name-extractor[![build status](https://secure.travis-ci.org/kesla/name-extractor.svg)](http://travis-ci.org/kesla/name-extractor)
+# name-extractor[![build status](https://secure.travis-ci.org/well-knits/name-extractor.svg)](http://travis-ci.org/well-knits/name-extractor)
 
 Give a String, extract out potential names. This is probably mostly useful as a starting point for something else, since the algorithm is quite rough - rather finding too many names than to few.
 
