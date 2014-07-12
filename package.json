@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kesla/name-extractor.git"
+    "url": "https://github.com/well-knits/name-extractor.git"
   },
   "bugs": {
-    "url": "https://github.com/kesla/name-extractor/issues"
+    "url": "https://github.com/well-knits/name-extractor/issues"
   },
-  "homepage": "https://github.com/kesla/name-extractor"
+  "homepage": "https://github.com/well-knits/name-extractor"
 }
