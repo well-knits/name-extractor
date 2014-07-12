@@ -58,3 +58,23 @@ test('when a title-minor-word is at the end of a sentence', function (t) {
 
   t.end()
 })
+
+test('Allow names to have dots and stuff in them', function (t) {
+  t.deepEqual(
+      extract('Hello. World! Foo... BAR!?!').sort()
+    , [
+          'BAR!?!'
+        , 'Foo...'
+        , 'Foo... BAR!?!'
+        , 'Hello.'
+        , 'Hello. World!'
+        , 'Hello. World! Foo...'
+        , 'Hello. World! Foo... BAR!?!'
+        , 'World!'
+        , 'World! Foo...'
+        , 'World! Foo... BAR!?!'
+
+      ]
+  )
+  t.end()
+})
