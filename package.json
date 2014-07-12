@@ -1,6 +1,6 @@
 {
   "name": "name-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Give a String, extract out potential names",
   "main": "name-extractor.js",
   "scripts": {
