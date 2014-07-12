@@ -9,17 +9,23 @@ var minors = require('title-case-minors').reduce(function (obj, minor) {
     },
     isCapitalized = function (string) {
       return string[0] >= 'A' && string[0] <= 'Z'
+    },
+    isTitleMinorCase = function (string) {
+      // make it possible for a title minor case word to be at the end of a
+      // sentence (or something similar)
+
+      return minors[string.replace(/[^a-z]*$/, '')]
     }
 
 Extractor.prototype._findNamesWithMinor = function (startIndex) {
   var index = startIndex + 1
 
   // first, step to the capitalized word
-  while((token = this.tokens[index]) && minors[token])
+  while((token = this.tokens[index]) && isTitleMinorCase(token))
     index++
 
   // second, add all the words that are capitalized or minors
-  while((token = this.tokens[index]) && (isCapitalized(token) || minors[token])) {
+  while((token = this.tokens[index]) && (isCapitalized(token) || isTitleMinorCase(token))) {
     this.names.push(this.tokens.slice(startIndex, index + 1).join(' '))
     index++
   }
@@ -29,7 +35,7 @@ Extractor.prototype._findNames = function (startIndex) {
   var index = startIndex
     , token
 
-  while((token = this.tokens[index]) && (isCapitalized(token) || minors[token])) {
+  while((token = this.tokens[index]) && (isCapitalized(token) || isTitleMinorCase(token))) {
     this.names.push(this.tokens.slice(startIndex, index + 1).join(' '))
     index++
   }

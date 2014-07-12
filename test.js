@@ -42,3 +42,19 @@ test('include some crazy spacing', function (t) {
   )
   t.end()
 })
+
+test('when a title-minor-word is at the end of a sentence', function (t) {
+  t.deepEqual(
+      extract('You\'re out!').sort()
+    , [
+          'You\'re'
+        , 'You\'re out!'
+      ]
+  )
+  t.deepEqual(
+      extract('Hello in.beep')
+    , [ 'Hello' ]
+  )
+
+  t.end()
+})
